@@ -1,0 +1,34 @@
+{
+  "connection": "default",
+  "collectionName": "testnesteds",
+  "info": {
+    "name": "testnested",
+    "description": "test of nested data type"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "linkone": {
+      "type": "json"
+    },
+    "linktwo": {
+      "type": "json"
+    },
+    "description": {
+      "type": "text"
+    },
+    "job": {
+      "model": "job",
+      "via": "testnesteds"
+    }
+  }
+}

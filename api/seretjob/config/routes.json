@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/seretjobs",
+      "handler": "Seretjob.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/seretjobs/count",
+      "handler": "Seretjob.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/seretjobs/:id",
+      "handler": "Seretjob.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/seretjobs",
+      "handler": "Seretjob.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/seretjobs/:id",
+      "handler": "Seretjob.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/seretjobs/:id",
+      "handler": "Seretjob.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

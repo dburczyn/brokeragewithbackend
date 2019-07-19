@@ -1,0 +1,44 @@
+{
+  "connection": "default",
+  "collectionName": "jobs",
+  "info": {
+    "name": "job",
+    "description": "This is content type for job widget"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "required": true,
+      "default": "default name",
+      "type": "string"
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "email": {
+      "type": "email"
+    },
+    "type": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "datetype": {
+      "type": "string"
+    },
+    "testnesteds": {
+      "collection": "testnested",
+      "via": "job"
+    }
+  }
+}

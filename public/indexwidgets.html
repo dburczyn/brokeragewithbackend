@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymo          "></script>
+  <script src="./js/testjs.js"></script>
+</head>
+<body>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <div data-gjs="navbar" class="navbar">
+    <div class="navbar-container">
+      <div id="isry4x" class="navbar-burger">
+        <div class="navbar-burger-line"></div>
+        <div class="navbar-burger-line"></div>
+        <div class="navbar-burger-line"></div>
+      </div>
+      <div data-gjs="navbar-items" class="navbar-items-c">
+        <nav data-gjs="navbar-menu" class="navbar-menu" id="id1a8d"><a href="login.html" class="navbar-menu-link">Log in</a>
+        </nav>
+        <nav data-gjs="navbar-menu" class="navbar-menu" id="logouttt"><a href="#" class="navbar-menu-link">Log out</a>
+        </nav>
+        <nav data-gjs="navbar-menu" class="navbar-menu"></nav>
+      </div>
+    </div>
+  </div>
+  <div data-gjs="navbar" class="navbar">
+    <div class="navbar-container">
+      <div id="ij916l" class="navbar-burger">
+        <div class="navbar-burger-line"></div>
+        <div class="navbar-burger-line"></div>
+        <div class="navbar-burger-line"></div>
+      </div>
+      <div data-gjs="navbar-items" class="navbar-items-c">
+        <nav data-gjs="navbar-menu" class="navbar-menu" id="iyih3q"><a href="#" class="navbar-menu-link">Trainings</a><a
+            href="#" class="navbar-menu-link">Jobs</a><a href="#" class="navbar-menu-link">Events</a></nav>
+        <nav data-gjs="navbar-menu" class="navbar-menu"></nav>
+      </div>
+    </div>
+  </div>
+  <section class="flex-sect" id="iprhl4">
+    <div class="container-width" id="ikg8hd">
+      <div class="flex-title">Brokerage Platform</div>
+      <div class="flex-desc">This is example of a brokerage platform with multiple endpoints for data</div>
+      <div id="testing" class="cards">
+        <div class="card">
+          <div class="card-header"></div>
+          <div class="card-body">
+            <div class="card-title">Default Contnent box</div>
+            <div class="card-sub-title">Default Description</div>
+            <div class="card-desc">DEfault abstract</div>
+            <div class="card-desc">DEfault abstract</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var items = document.querySelectorAll('#isry4x, #ij916l');
+    for (var i = 0, len = items.length; i < len; i++) {
+      (function () {
+        var e, t = 0,
+          n = function () {
+            var e, t = document.createElement("void"),
+              n = {
+                transition: "transitionend",
+                OTransition: "oTransitionEnd",
+                MozTransition: "transitionend",
+                WebkitTransition: "webkitTransitionEnd"
+              };
+            for (e in n)
+              if (void 0 !== t.style[e]) return n[e]
+          }(),
+          r = function (e) {
+            var t = window.getComputedStyle(e),
+              n = t.display,
+              r = (t.position, t.visibility, t.height, parseInt(t["max-height"]));
+            if ("none" !== n && "0" !== r) return e.offsetHeight;
+            e.style.height = "auto", e.style.display = "block", e.style.position = "absolute", e.style.visibility =
+              "hidden";
+            var i = e.offsetHeight;
+            return e.style.height = "", e.style.display = "", e.style.position = "", e.style.visibility = "", i
+          },
+          i = function (e) {
+            t = 1;
+            var n = r(e),
+              i = e.style;
+            i.display = "block", i.transition = "max-height 0.25s ease-in-out", i.overflowY = "hidden", "" == i[
+              "max-height"] && (i["max-height"] = 0), 0 == parseInt(i["max-height"]) ? (i["max-height"] = "0",
+              setTimeout(function () {
+                i["max-height"] = n + "px"
+              }, 10)) : i["max-height"] = "0"
+          },
+          a = function (r) {
+            if (r.preventDefault(), !t) {
+              var a = this.closest("[data-gjs=navbar]"),
+                o = a.querySelector("[data-gjs=navbar-items]");
+              i(o), e || (o.addEventListener(n, function () {
+                t = 0;
+                var e = o.style;
+                0 == parseInt(e["max-height"]) && (e.display = "", e["max-height"] = "")
+              }), e = 1)
+            }
+          };
+        "gjs-collapse" in this || this.addEventListener("click", a), this["gjs-collapse"] = 1
+      }.bind(items[i]))();
+    }
+  </script>
+</body>
+<html>

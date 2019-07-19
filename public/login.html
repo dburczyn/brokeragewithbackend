@@ -1,0 +1,101 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymo          "></script>
+    <script src="./js/testjs3.js"></script>
+  </head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="./css/style.css"/>
+<div data-gjs="navbar" class="navbar">
+  <div class="navbar-container">
+    <div id="isry4x" class="navbar-burger">
+      <div class="navbar-burger-line">
+      </div>
+      <div class="navbar-burger-line">
+      </div>
+      <div class="navbar-burger-line">
+      </div>
+    </div>
+    <div data-gjs="navbar-items" class="navbar-items-c">
+      <nav data-gjs="navbar-menu" id="id1a8d" class="navbar-menu">
+        <a href="#" class="navbar-menu-link">Log in</a>
+      </nav>
+      <nav data-gjs="navbar-menu" class="navbar-menu">
+      </nav>
+    </div>
+  </div>
+</div>
+<div data-gjs="navbar" class="navbar">
+  <div class="navbar-container">
+    <div id="ij916l" class="navbar-burger">
+      <div class="navbar-burger-line">
+      </div>
+      <div class="navbar-burger-line">
+      </div>
+      <div class="navbar-burger-line">
+      </div>
+    </div>
+    <div data-gjs="navbar-items" class="navbar-items-c">
+      <nav data-gjs="navbar-menu" id="iyih3q" class="navbar-menu">
+        <a href="#" class="navbar-menu-link">Trainings</a>
+        <a href="#" class="navbar-menu-link">Jobs</a>
+        <a href="#" class="navbar-menu-link">Events</a>
+      </nav>
+      <nav data-gjs="navbar-menu" class="navbar-menu">
+      </nav>
+    </div>
+  </div>
+</div>
+<section id="iprhl4" class="flex-sect">
+  <div id="ikg8hd" class="container-width">
+  </div>
+  <form class="form">
+    <div class="form-group">
+      <label class="label">Email</label>
+      <input id="email" placeholder="Type here your email" class="input"/>
+    </div>
+    <div class="form-group">
+      <label class="label">Password</label>
+      <input id="pass" type="email" placeholder="Type here your pass" class="input"/>
+    </div>
+    <div class="form-group">
+    </div>
+    <div class="form-group">
+      <button id="submitbutton" type="submit" class="button">Send</button>
+    </div>
+  </form>
+  <a href="./indexwidgets.html" class="button" style="box-sizing: border-box; font-size: 12px; padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 20px; background-color: rgb(217, 131, 166); color: rgb(255, 255, 255); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; font-weight: 300; text-align: center;">Home</a>
+</section>
+<script>var items = document.querySelectorAll('#isry4x, #ij916l');
+  for (var i = 0, len = items.length; i < len; i++) {
+    (function(){
+      var e,t=0,n=function(){
+        var e,t=document.createElement("void"),n={
+          transition:"transitionend",OTransition:"oTransitionEnd",MozTransition:"transitionend",WebkitTransition:"webkitTransitionEnd"};
+        for(e in n)if(void 0!==t.style[e])return n[e]}
+      (),r=function(e){
+        var t=window.getComputedStyle(e),n=t.display,r=(t.position,t.visibility,t.height,parseInt(t["max-height"]));
+        if("none"!==n&&"0"!==r)return e.offsetHeight;
+        e.style.height="auto",e.style.display="block",e.style.position="absolute",e.style.visibility="hidden";
+        var i=e.offsetHeight;
+        return e.style.height="",e.style.display="",e.style.position="",e.style.visibility="",i}
+      ,i=function(e){
+        t=1;
+        var n=r(e),i=e.style;
+        i.display="block",i.transition="max-height 0.25s ease-in-out",i.overflowY="hidden",""==i["max-height"]&&(i["max-height"]=0),0==parseInt(i["max-height"])?(i["max-height"]="0",setTimeout(function(){
+          i["max-height"]=n+"px"}
+,10)):i["max-height"]="0"}
+      ,a=function(r){
+        if(r.preventDefault(),!t){
+          var a=this.closest("[data-gjs=navbar]"),o=a.querySelector("[data-gjs=navbar-items]");
+          i(o),e||(o.addEventListener(n,function(){
+            t=0;
+            var e=o.style;
+            0==parseInt(e["max-height"])&&(e.display="",e["max-height"]="")}
+                                     ),e=1)}
+      };
+      "gjs-collapse"in this||this.addEventListener("click",a),this["gjs-collapse"]=1}
+     .bind(items[i]))();
+  }
+</script>

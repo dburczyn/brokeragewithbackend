@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/testnesteds",
+      "handler": "Testnested.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/testnesteds/count",
+      "handler": "Testnested.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/testnesteds/:id",
+      "handler": "Testnested.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/testnesteds",
+      "handler": "Testnested.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/testnesteds/:id",
+      "handler": "Testnested.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/testnesteds/:id",
+      "handler": "Testnested.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
